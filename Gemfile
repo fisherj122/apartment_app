@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -33,6 +34,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'underscore-rails'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

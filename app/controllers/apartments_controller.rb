@@ -1,5 +1,6 @@
 class ApartmentsController < ApplicationController
   before_action :set_apartment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except:  [:index, :show, :map_location, :all_map_locations]
 
   # GET /apartments
   # GET /apartments.json
@@ -34,7 +35,7 @@ end
 
   # GET /apartments/new
   def new
-    @apartment = Apartment.new
+    @apartment = current_user.apartments.build
   end
 
   # GET /apartments/1/edit
